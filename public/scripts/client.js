@@ -8,6 +8,7 @@ function onReady() {
   $('.js-minus-btn').on('click', addMinus);
   $('.js-multiply-btn').on('click', addMultiply);
   $('.js-divide-btn').on('click', addDivide);
+  $('.js-clear-btn').on('click', clearInputs);
   console.log('Ready');
 }
 
@@ -82,4 +83,9 @@ function addMultiply() {
 function addDivide() {
   console.log('/');
   operator = '/';
+}
+
+function clearInputs() {
+  $('.js-first-input').val('');
+  $('.js-second-input').val('');
 }
