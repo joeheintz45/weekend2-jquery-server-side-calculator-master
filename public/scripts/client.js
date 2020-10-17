@@ -67,21 +67,37 @@ function render(equation) {
 function addPlus() {
   console.log('+');
   operator = '+';
+  $('.js-plus-btn').addClass('button');
+  $('.js-minus-btn').removeClass('button');
+  $('.js-multiply-btn').removeClass('button');
+  $('.js-divide-btn').removeClass('button');
 }
 
 function addMinus() {
   console.log('-');
   operator = '-';
+  $('.js-minus-btn').addClass('button');
+  $('.js-plus-btn').removeClass('button');
+  $('.js-multiply-btn').removeClass('button');
+  $('.js-divide-btn').removeClass('button');
 }
 
 function addMultiply() {
   console.log('*');
   operator = '*';
+  $('.js-multiply-btn').addClass('button');
+  $('.js-plus-btn').removeClass('button');
+  $('.js-minus-btn').removeClass('button');
+  $('.js-divide-btn').removeClass('button');
 }
 
 function addDivide() {
   console.log('/');
   operator = '/';
+  $('.js-divide-btn').addClass('button');
+  $('.js-plus-btn').removeClass('button');
+  $('.js-multiply-btn').removeClass('button');
+  $('.js-minus-btn').removeClass('button');
 }
 
 function clearInputs() {

@@ -16,6 +16,10 @@ app.post('/calculator', (req, res) => {
   //   Number(equation.lastNumber),
   //   equation.operator
   // );
+  if (equation.operator === undefined) {
+    res.send(404);
+  }
+
   calculator(equation.firstNumber, equation.lastNumber, equation.operator);
   function calculator(firstVal, secondVal, mathOp) {
     let mathVal = 0;
