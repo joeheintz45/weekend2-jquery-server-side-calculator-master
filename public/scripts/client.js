@@ -1,7 +1,13 @@
 $(document).ready(onReady);
 
+let operator;
+
 function onReady() {
   $('.js-submit-btn').on('click', makeEquation);
+  $('.js-plus-btn').on('click', addPlus);
+  $('.js-minus-btn').on('click', addMinus);
+  $('.js-multiply-btn').on('click', addMultiply);
+  $('.js-divide-btn').on('click', addDivide);
   console.log('Ready');
 }
 
@@ -9,7 +15,7 @@ function makeEquation() {
   const equation = {
     firstNumber: Number($('.js-first-input').val()),
     lastNumber: Number($('.js-second-input').val()),
-    operator: '-',
+    operator: operator,
   };
   console.log('in click');
   postEquation(equation);
@@ -53,7 +59,27 @@ function render(equation) {
     let value = equation[i];
     $('.js-total').text(value.total);
     $('.js-history').append(`
-      <li>${value.firstNum} * ${value.lastNum} = ${value.total}</li>
+      <li>${value.firstNum} ${operator} ${value.lastNum} = ${value.total}</li>
     `);
   }
+}
+
+function addPlus() {
+  console.log('+');
+  operator = '+';
+}
+
+function addMinus() {
+  console.log('-');
+  operator = '-';
+}
+
+function addMultiply() {
+  console.log('*');
+  operator = '*';
+}
+
+function addDivide() {
+  console.log('/');
+  operator = '/';
 }
