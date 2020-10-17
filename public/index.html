@@ -5,12 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="scripts/client.js"></script>
     <title>Server Calculator</title>
   </head>
   <body>
     <header>
       <h1>Server Side Calculator</h1>
+      <div class="container">
+        <input
+          class="js-first-input"
+          type="number"
+          placeholder="First Number"
+        />
+        <button class="js-plus-btn">+</button>
+        <button class="js-minus-button">-</button>
+        <button class="js-multiply-btn">*</button>
+        <button class="js-divide-btn">/</button>
+        <input
+          class="js-second-input"
+          type="number"
+          placeholder="Second Number"
+        />
+        <button class="js-submit-btn">=</button>
+        <button class="js-clear-btn">C</button>
+      </div>
+      <div class="container">
+        <span class="js-total"></span>
+        <ul class="js-history"></ul>
+      </div>
     </header>
   </body>
 </html>

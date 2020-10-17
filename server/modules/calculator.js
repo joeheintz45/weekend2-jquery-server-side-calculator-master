@@ -11,5 +11,5 @@ module.exports = function (firstVal, secondVal, mathOp) {
   }
 
   console.log(mathVal);
-  return mathVal;
+  return toString(mathVal);
 };
