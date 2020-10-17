@@ -18,12 +18,11 @@ function makeEquation() {
     lastNumber: Number($('.js-second-input').val()),
     operator: operator,
   };
-  console.log('in click');
+
   postEquation(equation);
 }
 
 function postEquation(equation) {
-  console.log('in POST');
   $.ajax({
     type: 'POST',
     url: '/calculator',
@@ -60,7 +59,7 @@ function render(equation) {
     let value = equation[i];
     $('.js-total').text(value.total);
     $('.js-history').append(`
-      <li>${value.firstNum} ${operator} ${value.lastNum} = ${value.total}</li>
+      <li>${value.firstNum} ${value.operator} ${value.lastNum} = ${value.total}</li>
     `);
   }
 }

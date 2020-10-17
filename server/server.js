@@ -36,7 +36,7 @@ app.post('/calculator', (req, res) => {
   history.push({
     firstNum: equation.firstNumber,
     lastNum: equation.lastNumber,
-    operator: '',
+    operator: equation.operator,
     total: newVal,
   });
   res.sendStatus(200);
