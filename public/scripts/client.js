@@ -13,13 +13,22 @@ function onReady() {
 }
 
 function makeEquation() {
-  const equation = {
-    firstNumber: Number($('.js-first-input').val()),
-    lastNumber: Number($('.js-second-input').val()),
-    operator: operator,
-  };
+  if (
+    $('.js-first-input').val().length == 0 ||
+    $('.js-second-input').val().length == 0
+  ) {
+    alert('Please fill all fields!');
+  } else if (operator == undefined) {
+    alert('Please select an operator!');
+  } else {
+    const equation = {
+      firstNumber: Number($('.js-first-input').val()),
+      lastNumber: Number($('.js-second-input').val()),
+      operator: operator,
+    };
 
-  postEquation(equation);
+    postEquation(equation);
+  }
 }
 
 function postEquation(equation) {
