@@ -11,15 +11,8 @@ app.use(bodyParser.json());
 
 app.post('/calculator', (req, res) => {
   equation = req.body;
-  // newVal = mathValue(
-  //   Number(equation.firstNumber),
-  //   Number(equation.lastNumber),
-  //   equation.operator
-  // );
-  if (equation.operator === undefined) {
-    res.send(404);
-  }
 
+  // calculates the values the client side sends up on the POST
   calculator(equation.firstNumber, equation.lastNumber, equation.operator);
   function calculator(firstVal, secondVal, mathOp) {
     let mathVal = 0;
@@ -40,6 +33,7 @@ app.post('/calculator', (req, res) => {
     newVal = mathVal;
   }
 
+  // pushes those old values and new math values into an array
   history.push({
     firstNum: equation.firstNumber,
     lastNum: equation.lastNumber,
