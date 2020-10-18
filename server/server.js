@@ -31,6 +31,9 @@ app.post('/calculator', (req, res) => {
       mathVal = firstVal * secondVal;
     } else if (mathOp == '/') {
       mathVal = firstVal / secondVal;
+      if (secondVal == 0) {
+        mathVal = 'Not a Number';
+      }
     }
 
     console.log(mathVal);
