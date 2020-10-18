@@ -15,11 +15,13 @@ function onReady() {
 
 // grabs values from DOM and checks the fields for all values being valid
 function makeEquation() {
+  // checks if input fields are filled
   if (
     $('.js-first-input').val().length == 0 ||
     $('.js-second-input').val().length == 0
   ) {
     alert('Please fill all fields!');
+    // checks if operator was selected
   } else if (operator == undefined) {
     alert('Please select an operator!');
   } else {
@@ -73,7 +75,7 @@ function render(equation) {
     let value = equation[i];
     $('.js-total').text(value.total);
     $('.js-history').append(`
-      <li>${value.firstNum} ${value.operator} ${value.lastNum} = ${value.total}</li>
+      <li class="list">${value.firstNum} ${value.operator} ${value.lastNum} = ${value.total}</li>
     `);
   }
 } //  end render function

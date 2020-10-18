@@ -24,7 +24,8 @@ app.post('/calculator', (req, res) => {
       mathVal = firstVal * secondVal;
     } else if (mathOp == '/') {
       mathVal = firstVal / secondVal;
-      if (secondVal == 0) {
+      // checks for dividing by zero bug
+      if (firstVal == 0 || secondVal == 0) {
         mathVal = 'Not a Number';
       }
     }

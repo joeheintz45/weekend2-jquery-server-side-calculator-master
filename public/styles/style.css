@@ -1,5 +1,7 @@
 html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #d9d9d9;
 }
 
 .button {
@@ -7,4 +9,40 @@ html {
   background-color: #b5b5b5;
   border-radius: 5px;
   padding: 2px 7px;
+}
+
+header {
+  background-color: maroon;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  color: white;
+  border-radius: 15px;
+}
+.container {
+  padding: 25px;
+  text-align: center;
+  background-color: gray;
+  margin: 20px auto;
+  width: 500px;
+  border-radius: 25px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 25px;
+  text-align: center;
+  background-color: maroon;
+  color: white;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 25px;
+}
+
+.js-total {
+  border: 3px solid black;
+  text-align: center;
+  margin: auto;
+  height: 70px;
+  width: 110px;
 }
