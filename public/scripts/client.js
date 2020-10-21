@@ -10,6 +10,8 @@ function onReady() {
   $('.js-multiply-btn').on('click', addMultiply);
   $('.js-divide-btn').on('click', addDivide);
   $('.js-clear-btn').on('click', clearInputs);
+
+  getEquation();
   console.log('Ready');
 } // end onReady function
 
